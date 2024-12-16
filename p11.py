@@ -63,3 +63,5 @@ def main():
             maximum = max(maximum, get_diag_up_right(usable_grid, index))
 
     print(maximum)
+
+main()
