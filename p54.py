@@ -37,6 +37,10 @@ class Card:
         if isinstance(other, Card):
             return self.val > other.val
 
+    def __lt__(self, other):
+        if isinstance(other, Card): return not self.__gt__(other)
+
+
     def __repr__(self): return f"Card({self.alias if self.alias else self.val} of {self.kind})"
 
 class Hand(Enum):
